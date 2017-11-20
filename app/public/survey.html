@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Friend Survey</title>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	<style> body { background: url("../images/concrete-texture.png") #efeee7 center center repeat;} .panel { border: 2px solid #ccc; margin: 10px 10px 40px 10px; padding: 0px; } .panel-heading { background-color: #dcdcdc; padding: 10px;} .panel-body {background-color: #dcdcdc; padding: 10px;} .jumbotron { background-color: #dcdcdc; margin-top: 40px;} #friend-pic{ width: 100%; height: auto; } a { font-size: 10px; color: #333;} a:hover {color: #dcdcdc;} #links {margin: 20px;}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="jumbotron">
+					<h1>Survey Questions!</h1>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h5 class="panel-title">Please answer all the questions to find your new best friend!</h5>
+            <hr>
+					</div>
+					<div class="panel-body">
+						<form role="form" id="friendForm">
+							<div class="form-group">
+								<label for="friendName">Full Name (required)</label>
+								<input type="text" class="form-control" id="friendName">
+							</div>
+							<div class="form-group">
+								<label for="friendPic">Link to a Picture of You (required)</label>
+								<input type="text" class="form-control" id="friendPic">
+							</div>
+							<div class="form-group">
+    							<h4>1. You find yourself siding with the Empire in Star Wars</h4>
+    							<select data-placeholder=" " class="chosen-select" id="q1">
+      								<option value="" disabled selected>Select an Option</option>
+                      <option value="1">1 - Strongly Disagree</option>
+      								<option value="2">2 - Kinda Disagree</option>
+      								<option value="3">3 - Neutral</option>
+      								<option value="4">4 - Kinda Agree</option>
+      								<option value="5">5 - Strongly Agree</option>
+    							</select>
+  							</div>
+							<div class="form-group">
+    							<h4>2. You are a very organized person.</h4>
+    							<select data-placeholder=" " class="chosen-select" id="q2">
+      								<option value="" disabled selected>Select an Option</option>
+                      <option value="1">1 - Strongly Disagree</option>
+      								<option value="2">2 - Kinda Disagree</option>
+      								<option value="3">3 - Neutral</option>
+      								<option value="4">4 - Kinda Agree</option>
+      								<option value="5">5 - Strongly Agree</option>
+    							</select>
+  							</div>
+  							<div class="form-group">
+    							<h4>3. Rainy days watching TV is more appealing than outdoor activities.</h4>
+    							<select data-placeholder=" " class="chosen-select" id="q3">
+      								<option value="" disabled selected>Select an Option</option>
+                      <option value="1">1 - Strongly Disagree</option>
+      								<option value="2">2 - Kinda Disagree</option>
+      								<option value="3">3 - Neutral</option>
+      								<option value="4">4 - Kinda Agree</option>
+      								<option value="5">5 - Strongly Agree</option>
+    							</select>
+  							</div>
+  							<div class="form-group">
+    							<h4>4. Lamborghini's are way better than Ferrari's.</h4>
+    							<select data-placeholder=" " class="chosen-select" id="q4">
+      								<option value="" disabled selected>Select an Option</option>
+                      <option value="1">1 - Strongly Disagree</option>
+      								<option value="2">2 - Kinda Disagree</option>
+      								<option value="3">3 - Neutral</option>
+      								<option value="4">4 - Kinda Agree</option>
+      								<option value="5">5 - Strongly Agree</option>
+    							</select>
+  							</div>
+							<div class="form-group">
+    							<h4>5. You see your car only as a transportation device to get from Point A to Point B.</h4>
+    							<select data-placeholder=" " class="chosen-select" id="q5">
+      								<option value="" disabled selected>Select an Option</option>
+                      <option value="1">1 - Strongly Disagree</option>
+      								<option value="2">2 - Kinda Disagree</option>
+      								<option value="3">3 - Neutral</option>
+      								<option value="4">4 - Kinda Agree</option>
+      								<option value="5">5 - Strongly Agree</option>
+    							</select>
+  							</div>
+  							<div class="form-group">
+    							<h4>6. Gluten free foods are lyfe!!!</h4>
+    							<select data-placeholder=" " class="chosen-select" id="q6">
+      								<option value="" disabled selected>Select an Option</option>
+                      <option value="1">1 - Strongly Disagree</option>
+      								<option value="2">2 - Kinda Disagree</option>
+      								<option value="3">3 - Neutral</option>
+      								<option value="4">4 - Kinda Agree</option>
+      								<option value="5">5 - Strongly Agree</option>
+    							</select>
+  							</div>
+  							<div class="form-group">
+    							<h4>7. Using meme's is the only acceptable way to communicate.</h4>
+    							<select data-placeholder=" " class="chosen-select" id="q7">
+      								<option value="" disabled selected>Select an Option</option>
+                      <option value="1">1 - Strongly Disagree</option>
+      								<option value="2">2 - Kinda Disagree</option>
+      								<option value="3">3 - Neutral</option>
+      								<option value="4">4 - Kinda Agree</option>
+      								<option value="5">5 - Strongly Agree</option>
+    							</select>
+  							</div>
+  							<div class="form-group">
+    							<h4>8. Saturday's are for the BOYS!</h4>
+    							<select data-placeholder=" " class="chosen-select" id="q8">
+      								<option value="" disabled selected>Select an Option</option>
+                      <option value="1">1 - Strongly Disagree</option>
+      								<option value="2">2 - Kinda Disagree</option>
+      								<option value="3">3 - Neutral</option>
+      								<option value="4">4 - Kinda Agree</option>
+      								<option value="5">5 - Strongly Agree</option>
+    							</select>
+  							</div>
+  							<div class="form-group">
+    							<h4>9. You would do something potentially unethical for the right amount of money.</h4>
+    							<select data-placeholder=" " class="chosen-select" id="q9">
+      								<option value="" disabled selected>Select an Option</option>
+                      <option value="1">1 - Strongly Disagree</option>
+                      <option value="2">2 - Kinda Disagree</option>
+                      <option value="3">3 - Neutral</option>
+                      <option value="4">4 - Kinda Agree</option>
+                      <option value="5">5 - Strongly Agree</option>
+    							</select>
+  							</div>
+  							<div class="form-group">
+    							<h4>10. Listening to music while working on homework is ineffective.</h4>
+    							<select data-placeholder=" " class="chosen-select" id="q10">
+      								<option value="" disabled selected>Select an Option</option>
+                      <option value="1">1 - Strongly Disagree</option>
+      								<option value="2">2 - Kinda Disagree</option>
+      								<option value="3">3 - Neutral</option>
+      								<option value="4">4 - Kinda Agree</option>
+      								<option value="5">5 - Strongly Agree</option>
+    							</select>
+  							</div>
+                <button type="button" class="btn btn-dark btn-lg btn-block"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Finished? Click here to Submit and Find Your New Best Friend!</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="links">
+			<a href="/api/friends"> API Friends List </a>|
+			<a href="https://github.com/adlipsey/FriendFinder"> GitHub Project Repo </a>
+		</div>
+	</div>
+	<div class="modal fade" id="friendModal" data-show="true" tabindex="-1" role="dialog" aria-labelledby="friend-name" aria-hidden="true">
+  		<div class="modal-dialog" role="document">
+    		<div class="modal-content">
+      			<div class="modal-header">
+        			<h5 class="modal-title" id="friend-name"></h5>
+      			</div>
+      			<div class="modal-body">
+       			 <img id="friend-pic">
+      			</div>
+      			<div class="modal-footer">
+        			Say Hi to your new BEST FRIEND &#8482;
+      			</div>
+    		</div>
+  		</div>
+	</div>
+<script type="text/javascript">
+	$("#submit").on("click", function(event){
+		event.preventDefault();
+		var newFriend = {
+			name: $("#friendName").val().trim(),
+			photo: $("#friendPic").val().trim(),
+			scores: []
+		};
+		for(var i = 1; i <= 10; i++){
+			newFriend.scores.push(parseInt($("#q"+i).val()));
+		}
+		$.post("/api/friends", newFriend, function(data){
+			console.log(data);
+			$("#friend-name").text(data.name);
+			$("#friend-pic").attr("src", data.photo);
+			$('#friendModal').modal();
+		});
+		document.forms["friendForm"].reset();
+	});
+</script>
+</body>
+</html>
